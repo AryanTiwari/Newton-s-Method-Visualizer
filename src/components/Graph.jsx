@@ -44,7 +44,7 @@ function Graph({
         min: 0.001,
         max: 1000
       },
-      keepAspectRatio: false
+      keepAspectRatio: true
     });
 
     boardRef.current = board;
@@ -358,7 +358,8 @@ function Graph({
         style={{
           border: '1px solid var(--border-primary)',
           background: 'var(--graph-bg)',
-          height: 'calc(100vh - 120px)',
+          aspectRatio: '1 / 1',
+          maxHeight: 'calc(100vh - 120px)',
           minHeight: '400px'
         }}
       />
